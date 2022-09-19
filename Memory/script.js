@@ -120,8 +120,9 @@ main = document.getElementById("main")
 
 
     function refresh(){
-        /*Funksjon som lar knappen refreshe spillet
-        location.reload()*/
+        /*Funksjon som lar knappen refreshe spillet*/
+        location.reload()
+        /*
         generatePics()
         var scoreAdder = 0
         score.innerText = scoreAdder
@@ -133,6 +134,7 @@ main = document.getElementById("main")
         for(var i = 0; i<main.children.length;i++){
             main.children[i].children[0].classList.add("innerDIV")
         }
+        */
     }
 
     var elapsed = 0;
