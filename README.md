@@ -1,3 +1,3 @@
 - 👋 Hi, I’m @JardarIversen
-- 👀 I’m interested in prgramming though i am a noob
+- 👀 I’m interested in prgramming
 - 🌱 I’m currently learning python and js
