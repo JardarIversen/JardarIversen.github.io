@@ -80,8 +80,8 @@ main {
   border-radius: 5px;
   padding: 1rem;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s;
   max-width: 500px;
+  transition: transform 0.3s;
 }
 
 .project-card a {
