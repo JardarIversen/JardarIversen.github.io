@@ -4,6 +4,7 @@ document.body.appendChild(canvas);
 canvas.style.position = "fixed";
 canvas.style.top = "0";
 canvas.style.left = "0";
+canvas.style.right = "0";
 canvas.style.zIndex = "-1";
 canvas.width = window.innerWidth;
 canvas.height = window.innerHeight;
@@ -11,6 +12,9 @@ canvas.height = window.innerHeight;
 const characters =
   "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
 const columns = canvas.width / 20;
+
+const frameInterval = 50; // Set the desired interval between frames in milliseconds
+let lastFrameTime = 0;
 
 let drops = [];
 for (let i = 0; i < columns; i++) {
@@ -33,4 +37,12 @@ function drawMatrixRain() {
   }
 }
 
-setInterval(drawMatrixRain, 50);
+function loop(timestamp) {
+  if (timestamp - lastFrameTime >= frameInterval) {
+    drawMatrixRain();
+    lastFrameTime = timestamp;
+  }
+  requestAnimationFrame(loop);
+}
+
+requestAnimationFrame(loop);
